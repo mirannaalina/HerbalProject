@@ -1,13 +1,15 @@
 package ro.herb.herbalproject.controller.user;
 
 
-import ro.herb.herbalproject.constraint.FieldMatch;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 
 //@FieldMatch
-public class UserRegistrationDto {
+public class UserDto {
+
+    //data transfer object,
 
 
     @NotNull

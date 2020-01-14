@@ -1,8 +1,7 @@
 package ro.herb.herbalproject.constraint;
 
 
-import org.springframework.beans.BeanUtils;
-import ro.herb.herbalproject.controller.user.UserRegistrationDto;
+import ro.herb.herbalproject.controller.user.UserDto;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -22,7 +21,7 @@ public class FieldMatchValidator  implements ConstraintValidator<FieldMatch,Obje
 
     @Override
     public boolean isValid(final Object value, final ConstraintValidatorContext context) {
-        UserRegistrationDto user = (UserRegistrationDto) value;
+        UserDto user = (UserDto) value;
         return user.getPassword().equals(user.getMatchingPassword());
 
     }
